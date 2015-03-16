@@ -1,0 +1,6 @@
+<h1>Cat Pictures</h1>
+<p>Try specifying the number of pictures!</p>
+<p> add something like "/5" to the URL</p>
+<% @cats.each do |cat| %>
+  <img src="<%= cat.url %>" alt="Cat pic">
+<% end %>
