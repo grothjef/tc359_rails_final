@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'rails_12factor', group: :production
+
+gem 'pg'
+
 # Cat gemfile
 gem 'cat_api', '~> 0.1.0'
 
