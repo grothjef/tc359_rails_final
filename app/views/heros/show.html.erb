@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hero.name %>
+</p>
+
+<p>
+  <strong>Movespeed:</strong>
+  <%= @hero.movespeed %>
+</p>
+
+<p>
+  <strong>Turnrate:</strong>
+  <%= @hero.turnrate %>
+</p>
+
+<p>
+  <strong>Sightrange:</strong>
+  <%= @hero.sightrange %>
+</p>
+
+<p>
+  <strong>Strength:</strong>
+  <%= @hero.strength %>
+</p>
+
+<p>
+  <strong>Agility:</strong>
+  <%= @hero.agility %>
+</p>
+
+<p>
+  <strong>Intelligence:</strong>
+  <%= @hero.intelligence %>
+</p>
+
+<%= link_to 'Edit', edit_hero_path(@hero) %> |
+<%= link_to 'Back', heros_path %>

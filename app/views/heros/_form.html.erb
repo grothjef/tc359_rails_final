@@ -1,0 +1,45 @@
+<%= form_for(@hero) do |f| %>
+  <% if @hero.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hero.errors.count, "error") %> prohibited this hero from being saved:</h2>
+
+      <ul>
+      <% @hero.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :movespeed %><br>
+    <%= f.number_field :movespeed %>
+  </div>
+  <div class="field">
+    <%= f.label :turnrate %><br>
+    <%= f.text_field :turnrate %>
+  </div>
+  <div class="field">
+    <%= f.label :sightrange %><br>
+    <%= f.text_area :sightrange %>
+  </div>
+  <div class="field">
+    <%= f.label :strength %><br>
+    <%= f.check_box :strength %>
+  </div>
+  <div class="field">
+    <%= f.label :agility %><br>
+    <%= f.check_box :agility %>
+  </div>
+  <div class="field">
+    <%= f.label :intelligence %><br>
+    <%= f.check_box :intelligence %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
