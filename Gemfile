@@ -1,11 +1,15 @@
 source 'https://rubygems.org'
 
+ruby '2.2.1'
+
 gem 'rails_12factor', group: :production
 
 gem 'pg'
 
 # Cat gemfile
 gem 'cat_api', '~> 0.1.0'
+
+gem 'rails_12factor', group: :production
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
