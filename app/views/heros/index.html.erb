@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Dota 2 Heros</h1>
+<h1>Dota 2 Heroes</h1>
 
 <table>
   <thead>
@@ -27,8 +27,10 @@
         <td><%= hero.agility %></td>
         <td><%= hero.intelligence %></td>
         <td><%= link_to 'Show', hero %></td>
-        <td><%= link_to 'Edit', edit_hero_path(hero) %></td>
-        <td><%= link_to 'Destroy', hero, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if user_signed_in? %>
+          <td><%= link_to 'Edit', edit_hero_path(hero) %></td>
+          <td><%= link_to 'Destroy', hero, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +38,6 @@
 
 <br>
 
-<%= link_to 'New Hero', new_hero_path %>
+<% if user_signed_in? %>
+  <%= link_to 'New Hero', new_hero_path %>
+<% end %>

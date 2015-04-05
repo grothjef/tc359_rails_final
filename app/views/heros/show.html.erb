@@ -35,5 +35,7 @@
   <%= @hero.intelligence %>
 </p>
 
-<%= link_to 'Edit', edit_hero_path(@hero) %> |
+<% if user_signed_in? %>
+  <%= link_to 'Edit', edit_hero_path(@hero) %> |
+<% end %>
 <%= link_to 'Back', heros_path %>
