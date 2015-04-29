@@ -5,7 +5,8 @@ class HerosController < ApplicationController
   # GET /heros
   # GET /heros.json
   def index
-    @heros = Hero.all
+    @heros = Hero.search(params[:search])
+    @doc = Nokogiri::HTML(open("http://www.dotabuff.com/heroes/winning"))
   end
 
   # GET /heros/1

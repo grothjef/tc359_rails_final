@@ -2,6 +2,13 @@
 
 <h1>Dota 2 Heroes</h1>
 
+<%= form_tag heros_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
 <table>
   <thead>
     <tr>
@@ -26,6 +33,10 @@
         <td><%= hero.strength %></td>
         <td><%= hero.agility %></td>
         <td><%= hero.intelligence %></td>
+        <td>
+          <strong>Roles:</strong>
+          ass
+        </td>
         <td><%= link_to 'Show', hero %></td>
         <% if user_signed_in? %>
           <td><%= link_to 'Edit', edit_hero_path(hero) %></td>
@@ -41,3 +52,11 @@
 <% if user_signed_in? %>
   <%= link_to 'New Hero', new_hero_path %>
 <% end %>
+<br>
+<h1>Highest Win Rates</h1>
+<h2>listed by highest this month according to DotaBuff</h2>
+
+<%= @doc.xpath('//tr/td[@class = "cell-xlarge"]').each do |node| %>
+      <%= node.text %>
+      <br>
+    <% end %>

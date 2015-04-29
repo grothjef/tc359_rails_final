@@ -8,4 +8,12 @@ class Hero < ActiveRecord::Base
 
 	validates_format_of :sightrange, with: /\A\d{4}\/\d{3,4}\z/, message: "isn't a correctly formatted sight range: e.g. 1800/800", allow_blank: true
 
+	def self.search(search)
+ 	  if search
+    	where('name LIKE ?', "%#{search}%")
+  	else
+    	all
+  	end
+	end
+
 end
