@@ -3,13 +3,13 @@
 I chose to do:
 
 * (1) Add search to your index action in Rails
-	- there is a search bar above the heroes tables
+  - there is a search bar above the heroes tables
 
 * (1) Scrape data from another website with nokogiri
-	- I scrape from dotabuff the heroes sorted by winrate
+  - I scrape from dotabuff the heroes sorted by winrate
 
 * (1) Gauging performance and identifying bottlenecks in Rails
-	- implemented the lol_dba gem and the rack-mini-profiler gem
+  - implemented the lol_dba gem and the rack-mini-profiler gem
 
 * (2) Visualize a bar chart (or other simple chart) with d3.js
-	- Implemented a bar graph of all created hero movespeeds
+  - Implemented a bar graph of all created hero movespeeds

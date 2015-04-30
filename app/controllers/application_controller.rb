@@ -16,9 +16,9 @@ private
   helper_method :user_signed_in?
 
   def only_allow_signed_in_users
-  	unless user_signed_in?
-   	 redirect_to sign_in_url, notice: 'You must sign in to access this part of the app.'
-  	end
-	end
+    unless user_signed_in?
+     redirect_to sign_in_url, notice: 'You must sign in to access this part of the app.'
+    end
+  end
 
 end
